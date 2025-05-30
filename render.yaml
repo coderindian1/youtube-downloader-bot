@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: youtube-downloader-bot
+    env: python
+    buildCommand: pip install -r deps.txt
+    startCommand: python main.py
+    envVars:
+      - key: API_ID
+        sync: false
+      - key: API_HASH
+        sync: false
+      - key: BOT_TOKEN
+        sync: false
